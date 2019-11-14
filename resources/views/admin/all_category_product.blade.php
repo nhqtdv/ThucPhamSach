@@ -3,9 +3,22 @@
 <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      Danh mục sản phẩm hiện tại
+      Danh mục sản phẩm hiện tại</br>
+      <?php
+                        $message = Session::get('message');
+                        if($message){
+                          
+                          echo"<center>";
+                            echo $message;
+                            Session::put('message',null);
+                            echo"</center>";
+                        }
+                        ?></div>
+                      
     </div>
     <div class="row w3-res-tb">
+
+                           
       <div class="col-sm-5 m-b-xs">
         <select class="input-sm form-control w-sm inline v-middle">
           <option value="0">Bulk action</option>
@@ -36,25 +49,38 @@
               </label>
             </th>
             <th>Tên danh mục</th>
+             
             <th>Hiển thị</th>
-            <th>Ngày thêm</th>
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
-         
+         @foreach($all_category_product as $key => $cate_pro)
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>Videodown</td>
-            <td>4c</td>
-            <td>Jul 1, 2013</td>
+            <td>{{$cate_pro -> category_name}}</td>
+            <td><span class="text-ellipsis">
+             <?php
+             if($cate_pro->category_status==0){
+              ?>
+              <a href="{{URL::to('/unactive-category-product/'.$cate_pro->category_id)}}"><span class ="fa-thump-styling fa fa-eye-slash "></span></a>
+              <?php
+              }else{
+                ?>
+              <a href="{{URL::to('/active-category-product/'.$cate_pro->category_id)}}"><span class ="fa-thump-styling  fa fa-eye"></span></a>
+                <?php               
+             }
+             ?> 
+            </span></td>
             <td>
               <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>
+          @endforeach
         </tbody>
       </table>
     </div>
+    
     <footer class="panel-footer">
       <div class="row">
         
