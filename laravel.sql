@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2019 at 07:52 AM
+-- Generation Time: Nov 14, 2019 at 05:56 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -122,6 +122,18 @@ CREATE TABLE `tbl_category_product` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `tbl_category_product`
+--
+
+INSERT INTO `tbl_category_product` (`category_id`, `category_name`, `category_desc`, `category_status`, `created_at`, `updated_at`) VALUES
+(1, 'Rau củ quả', 'Các loại rau', 1, NULL, NULL),
+(2, 'Thịt & Thuỷ hải sản', 'Các loại thịt và thủy hải sản', 1, NULL, NULL),
+(3, 'Sữa & Chế phẩm từ sữa', 'Các loại sữa', 0, NULL, NULL),
+(4, 'Thức uống', 'Các loại thức uống', 1, NULL, NULL),
+(5, 'Ngũ cốc, Đậu & Hạt', 'Ngũ cốc, Đậu & Hạt', 1, NULL, NULL),
+(6, 'Gia vị & Nguyên liệu nấu ăn', 'Gia vị & Nguyên liệu nấu ăn', 0, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -218,7 +230,7 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_category_product`
 --
 ALTER TABLE `tbl_category_product`
-  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
