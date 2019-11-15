@@ -13,6 +13,7 @@
 //frontend
 
 Route::get('/', 'HomeController@index' );
+//Route::get('/', 'CategoryProduct@add_category_product' );
 Route::get('/trang-chu', 'HomeController@index');
 
 
@@ -26,11 +27,25 @@ Route::post('/admin-dashboard','AdminController@dashboard');
 
 
 //Category
-Route::get('/add-category', 'CategoryProduct@add_category_product');
-Route::get('/all-category', 'CategoryProduct@all_category_product');
-Route::get('/edit-category/{category_product_id}', 'CategoryProduct@edit_category_product');
-Route::get('/delete-category/{category_product_id}', 'CategoryProduct@delete_category_product');
+Route::get('/add-category', 'CategoryProductabc@add_category_product');
+Route::get('/all-category', 'CategoryProductabc@all_category_product');
+Route::get('/edit-category/{category_product_id}', 'CategoryProductabc@edit_category_product');
+Route::get('/delete-category/{category_product_id}', 'CategoryProductabc@delete_category_product');
+Route::get('/unactive-category-product/{category_product_id}', 'CategoryProductabc@unactive_category_product');
+Route::get('/active-category-product/{category_product_id}', 'CategoryProductabc@active_category_product');
+Route::post('/save-category', 'CategoryProductabc@save_category_product');
+Route::post('/update-category/{category_product_id}', 'CategoryProductabc@update_category_product');
 
-Route::get('/unactive-category-product/{category_product_id}', 'CategoryProduct@unactive_category_product');
-Route::get('/active-category-product/{category_product_id}', 'CategoryProduct@active_category_product');
-Route::post('/save-category', 'CategoryProduct@save_category_product');
+//Brand Product
+
+Route::get('/add-brand', 'BrandProduct@add_brand_product');
+Route::get('/all-brand', 'BrandProduct@all_brand_product');
+Route::get('/edit-brand/{brand_product_id}', 'BrandProduct@edit_brand_product');
+Route::get('/delete-brand/{brand_product_id}', 'BrandProduct@delete_brand_product');
+
+Route::get('/unactive-brand-product/{brand_product_id}', 'BrandProduct@unactive_brand_product');
+Route::get('/active-brand-product/{brand_product_id}', 'BrandProduct@active_brand_product');
+Route::post('/save-brand', 'BrandProduct@save_brand_product');
+Route::post('/update-brand/{brand_product_id}', 'BrandProduct@update_brand_product');
+
+

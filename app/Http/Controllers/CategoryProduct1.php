@@ -1,7 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+// use App\Http\Request;
+use Session;
 use Illuminate\Support\Facades\Redirect;
 session_start();
 
@@ -22,6 +26,7 @@ class CategoryProduct extends Controller
         $data['category_name'] = $request->category_product_name;
         $data['category_desc'] = $request->category_product_desc;
         $data['category_status'] = $request->category_product_status;
+
         DB::table('tbl_category_product')->insert($data);
         Session::put('message','Thêm nhà cung cấp thành công !');
         return Redirect::to('all-category');

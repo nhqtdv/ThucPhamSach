@@ -202,7 +202,7 @@ ul.sidebar-menu li a.active i {
     transition:all .3s ease-in-out;
 }
 .footer {
-    background: #d19a98;
+    background: #88d06f;
     padding: 20px;
 }
 .footer p {
@@ -219,7 +219,7 @@ ul.sidebar-menu li a.active i {
     left:0;
     right:0;
     z-index:1002;
-    background:rgb(240, 188, 180);
+    background:#88d06f;
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
@@ -239,7 +239,7 @@ ul.sidebar-menu li a.active i {
     width:100%;
 }
 .brand {
-    background:#8b5c7e;
+    background:#565b54;
     float:left;
     width:240px;
     height:80px;
@@ -275,7 +275,7 @@ ul.top-menu {
 ul.top-menu > li > a {
     color: #fff;
     font-size: 16px;
-    background: #8b5c7e;
+    background: #0d4604;
     padding: 4px 8px;
     margin-right: 15px;
     border-radius: 50%;
@@ -283,7 +283,7 @@ ul.top-menu > li > a {
     padding-right: 8px !important;
 }
 ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
-    background:#fa9fa4;
+    background:#0d4604;
     text-decoration:none;
     color:#fff !important;
     padding-right:8px !important;
@@ -507,7 +507,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     background: none;
     margin-right: 0;
     border: 1px solid #8b5c7e;
-    background: #8b5c7e;
+    background: #0d4604;
 }
 .top-nav ul.top-menu>li.language>a {
     margin-top:-2px;
@@ -574,7 +574,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     transition: all .3s ease;
     border: 1px solid #8b5c7e;
     box-shadow: none;
-    background: #8b5c7e url(../images/search-icon.png) no-repeat 10px 8px;
+    background: #0d4604 url(../images/search-icon.png) no-repeat 10px 8px;
     padding: 0 5px 0 30px;
     color: #fff;
     border-radius: 100px;
@@ -601,7 +601,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     float:left;
     margin-top:23px;
     margin-left:-15px;
-    background:#8b5c7e;
+    background:#0d4604;
     border-radius:50%;
     -webkit-border-radius:50%;
     width:32px;
@@ -614,7 +614,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
     display:inline-block;
     font-size:15px;
     padding:8px 8px 8px 9px;
-    color:#fff;
+    color:#396f80;
 }
 .sidebar-toggle-box:hover {
     background:#fa9fa4;

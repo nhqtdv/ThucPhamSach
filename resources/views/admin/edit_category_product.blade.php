@@ -26,14 +26,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{('public/backend/js/jquery2.0.3.min.js')}}"></script>
 <script src="{{('public/backend/js/raphael-min.js')}}"></script>
 <script src="{{('public/backend/js/morris.js')}}"></script>
-
+</head>
 
 <style type="text/css">
  .panel {
     border: none ! important;
 }
 </style>
-</head>
+
 <div class="row">
             <div class="col-lg-12">
                     <section class="panel">
@@ -41,17 +41,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             Cập nhật danh mục sản phẩm
                         </header>
                         <div class="panel-body">
-                    @foreach ($edit_category_product as $key => $edit_value)
+                            @foreach ($edit_category_product as $key => $edit_value)
                              <div class="position-center">
-                                <form role="form" action="{{URL::to('/edit-category')}}" method = "post">
-                                    
+                                <form role="form" action="{{URL::to('/update-category/'.$edit_value->category_id)}}" method = "post">
+                                    {{csrf_field()}}
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Tên danh mục</label>
-                                    <input  type="text" name="category_product_name" value = "{{$edit_value -> category_name}}"class="form-control" id="exampleInputEmail1" placeholder="Nhập tên danh mục"></input>
+                                    <input  type="text" value = "{{$edit_value -> category_name}}" name="category_product_name"  class="form-control" id="exampleInputEmail1" placeholder="Nhập tên danh mục"></input>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Mô tả danh mục</label>
-                                    <input  type="text" name="category_product_desc" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên danh mục"></input>
+                                    <input  type="text" value = "{{$edit_value -> category_desc}}" name="category_product_desc" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên danh mục"></input>
                                     
                                 </div>
                                 
