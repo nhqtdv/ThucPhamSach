@@ -55,13 +55,13 @@ class BrandProduct extends Controller
         $data['brand_name'] = $request->brand_product_name;
         $data['brand_desc'] = $request->brand_product_desc;
         DB::table('tbl_brand')-> where('brand_id',$brand_product_id) ->update($data);
-        Session::put('message','Cập nhật danh mục sản phẩm thành công !');
+        Session::put('message','Cập nhật nhà cung cấp sản phẩm thành công !');
         return Redirect::to('all-brand');
 
         }
     public function delete_brand_product($brand_product_id){
         DB::table('tbl_brand')-> where('brand_id',$brand_product_id) ->delete();
-        Session::put('message','Xóa danh mục sản phẩm thành công !');
+        Session::put('message','Xóa nhà cung cấp sản phẩm thành công !');
         return Redirect::to('all-brand');
 
         }
