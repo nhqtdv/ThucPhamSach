@@ -121,4 +121,5 @@ class Product extends Controller
         return Redirect::to('all-product');
 
         }
+
 }

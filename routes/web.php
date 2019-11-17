@@ -15,7 +15,9 @@
 Route::get('/', 'HomeController@index' );
 //Route::get('/', 'CategoryProduct@add_category_product' );
 Route::get('/trang-chu', 'HomeController@index');
-
+//Danh muc san pham
+Route::get('/danh-muc-san-pham/{category_id}', 'CategoryProductabc@show_category_home' );
+Route::get('/nha-cung-cap/{category_id}', 'BrandProduct@show_brand_home' );
 
 
 
