@@ -410,11 +410,11 @@
     
 
   
-   <script src="public/frontend/js/jquery.js"></script>
-    <script src="public/frontend/js/bootstrap.min.js"></script>
-    <script src="public/frontend/js/jquery.scrollUp.min.js"></script>
-    <script src="public/frontend/js/price-range.js"></script>
-    <script src="public/frontend/js/jquery.prettyPhoto.js"></script>
-    <script src="public/frontend/js/main.js"></script>
+    <script src="{{URL::to('public/frontend/js/jquery.js')}}"></script>
+    <script src="{{URL::to('public/frontend/js/bootstrap.min.js')}}"></script>
+    <script src="{{URL::to('public/frontend/js/jquery.scrollUp.min.js')}}"></script>
+    <script src="{{URL::to('public/frontend/js/price-range.js')}}"></script>
+    <script src="{{URL::to('public/frontend/js/jquery.prettyPhoto.js')}}"></script>
+    <script src="{{URL::to('public/frontend/js/main.js')}}"></script>
 </body>
 </html>

@@ -18,6 +18,7 @@ Route::get('/trang-chu', 'HomeController@index');
 //Danh muc san pham
 Route::get('/danh-muc-san-pham/{category_id}', 'CategoryProductabc@show_category_home' );
 Route::get('/nha-cung-cap/{category_id}', 'BrandProduct@show_brand_home' );
+Route::get('/chi-tiet-san-pham/{product_id}', 'Product@detail_product' );
 
 
 
@@ -60,4 +61,11 @@ Route::get('/unactive-product/{product_id}', 'Product@unactive_product');
 Route::get('/active-product/{product_id}', 'Product@active_product');
 Route::post('/save-product', 'Product@save_product');
 Route::post('/update-product/{product_id}', 'Product@update_product');
+
+//Giỏ hàng
+Route::post('/save-cart', 'CartController@save_cart');
+Route::get('/show-cart', 'CartController@show_cart');
+Route::get('/delete-cart/{rowId}', 'CartController@delete_cart');
+
+
 
