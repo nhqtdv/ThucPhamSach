@@ -7,6 +7,7 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                         <div class="productinfo text-center">
+                                             <a href="{{URL::to('chi-tiet-san-pham/'.$product ->product_id)}}">
                                             <img src="{{URL::to('public/upload/product/'.$product ->product_image)}}" alt="" />
                                             <h2>{{number_format($product->product_price).' Đ'}}</h2>
                                             <p>{{($product->product_name)}}</p>
