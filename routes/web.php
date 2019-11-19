@@ -66,6 +66,11 @@ Route::post('/update-product/{product_id}', 'Product@update_product');
 Route::post('/save-cart', 'CartController@save_cart');
 Route::get('/show-cart', 'CartController@show_cart');
 Route::get('/delete-cart/{rowId}', 'CartController@delete_cart');
+Route::post('/update-cart-qty', 'CartController@update_cart_quantity');
 
+///Thanh toán
+Route::get('/checkout', 'CheckoutController@checkout');
+Route::post('/save-checkout', 'CheckoutController@save_checkout');
+Route::get('/completed', 'CheckoutController@payment');
 
 
