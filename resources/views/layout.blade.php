@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | Trang chủ</title>
+    <title>Thực phẩm sạch</title>
     <link href="{{URL::asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{URL::asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{URL::asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -56,41 +56,9 @@
                         <div class="logo pull-left">
                             <a href="index.html"><img src="images/logo.png" alt="" /></a>
                         </div>
-                        <div class="btn-group pull-right">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    USA
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Canada</a></li>
-                                    <li><a href="#">UK</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    DOLLAR
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Canadian Dollar</a></li>
-                                    <li><a href="#">Pound</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                     </div>
-                    <div class="col-sm-8">
-                        <div class="shop-menu pull-right">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                 
                 </div>
             </div>
         </div><!--/header-middle-->
@@ -111,18 +79,22 @@
                             <ul class="nav navbar-nav collapse navbar-collapse">
                                 <li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
                                 <li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
+                                   
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-                                        
+                                         @foreach($category as $key =>$cate)
+                                        <li><a href="{{URL::to('/danh-muc-san-pham/'.$cate->category_id)}}">{{$cate->category_name}}</a></li>  
+                                          @endforeach  
                                     </ul>
-                                </li> 
+                                  
+                                </li>
+                                
                                 <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="blog.html">Blog List</a></li>
                                       
                                     </ul>
                                 </li> 
-                                <li><a href="404.html">Giỏ hàng</a></li>
+                                <li><a href="{{URL::to('/show-cart')}}">Giỏ hàng</a></li>
                                 <li><a href="contact-us.html">Liên hệ</a></li>
                             </ul>
                         </div>
