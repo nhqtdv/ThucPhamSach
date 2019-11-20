@@ -100,6 +100,7 @@
 							<div class="carousel-inner">
 								<div class="item active">
 								@foreach($relate as $key => $lienquan)	
+								
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
@@ -108,6 +109,7 @@
                                             <h2>{{($lienquan->product_price).' VNĐ'}}</h2>
                                             <p>{{($lienquan->product_name)}}</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+                                           
                                         </div>
                                         
                                 </div>
