@@ -16,7 +16,13 @@ body {
 ul li {
   list-style: none;
 }
+.quote{
+  margin: auto;
 
+  background-color: #80bf56;
+  height: 125px;
+  width: 1900px;
+}
 a:hover {
 outline: none;
 text-decoration:none;

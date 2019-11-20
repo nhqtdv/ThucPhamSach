@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="images/logo.png" alt="" /></a>
+                            <a href="{{URL::to('/')}}"><img src="{{URL::to('public/frontend/images/logo.png')}}" alt="" width="260" height="170"/></a>
                         </div>
                         
                     </div>
@@ -121,41 +121,20 @@
                         </ol>
                         
                         <div class="carousel-inner">
+                            
                             <div class="item active">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free E-Commerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/girl1.jpg" class="girl img-responsive" alt="" />
-                                    <img src="images/pricing.png"  class="pricing" alt="" />
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>100% Responsive Design</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/girl2.jpg" class="girl img-responsive" alt="" />
-                                    <img src="images/pricing.png"  class="pricing" alt="" />
+                               
+                              <div class="col-sm-16">
+                                    <img src="{{URL::to('public/frontend/images/2.png')}}" class="girl img-responsive" alt="" />
+                                   
                                 </div>
                             </div>
                             
                             <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free Ecommerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Get it now</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/girl3.jpg" class="girl img-responsive" alt="" />
-                                    <img src="images/pricing.png" class="pricing" alt="" />
+                                
+                                <div class="col-sm-16">
+                                    <img src="{{URL::to('public/frontend/images/3.png')}}" class="girl img-responsive" alt="" />
+                                   
                                 </div>
                             </div>
                             
@@ -204,7 +183,7 @@
                       
                         
                         <div class="shipping text-center"><!--shipping-->
-                            <img src="{{URL::asset('public/frontend/images/shipping.jpg')}}" alt="" />
+                            <img src="{{URL::asset('public/frontend/images/free.png')}}" width="200" alt="" />
                         </div><!--/shipping-->
                     
                     </div>
@@ -220,16 +199,17 @@
                 </div>
             </div>
         </div>
+          <div class="quote"></div>
     </section>
-    
+  
     <footer id="footer"><!--Footer-->
         <div class="footer-top">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="companyinfo">
-                            <h2><span>e</span>-shopper</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                            <h2><span>Thực phẩm sạch</span></h2>
+                            <p>Có trang trại rau nhiệt đới đầu tiên tại Việt Nam đạt chứng nhận hữu cơ của Bộ Nông nghiệp Mỹ (USDA) & EU Organic Farming (Liên minh châu Âu)</p>
                         </div>
                     </div>
                     <div class="col-sm-7">
@@ -237,14 +217,14 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{URL::asset('public/frontend/images/iframe1.png')}}" alt="" />
+                                        <img src="{{URL::asset('public/frontend/images/a1.png')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>Những loại thực phẩm giúp bạn chống chọi với những ngày ô nhiễm không khí</p>
+                                
                             </div>
                         </div>
                         
@@ -252,14 +232,14 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                         <img src="{{URL::asset('public/frontend/images/iframe1.png')}}" alt="" />
+                                         <img src="{{URL::asset('public/frontend/images/a2.jpg')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>22 THỰC PHẨM GIÀU CHẤT XƠ BẠN NÊN ĂN NHIỀU HƠN MỖI NGÀY?</p>
+                                
                             </div>
                         </div>
                         
@@ -267,14 +247,14 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                       <img src="{{URL::asset('public/frontend/images/iframe1.png')}}" alt="" />
+                                       <img src="{{URL::asset('public/frontend/images/a3.png')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>Trong sữa thường có đầy kháng sinh, hormon tăng trưởng và thuốc trừ sâu, còn sữa hữu cơ thì không</p>
+                                
                             </div>
                         </div>
                         
@@ -282,92 +262,28 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                       <img src="{{URL::asset('public/frontend/images/iframe1.png')}}" alt="" />
+                                       <img src="{{URL::asset('public/frontend/images/a4.jpg')}}" alt="" />
                                     </div>
                                     <div class="overlay-icon">
                                         <i class="fa fa-play-circle-o"></i>
                                     </div>
                                 </a>
-                                <p>Circle of Hands</p>
-                                <h2>24 DEC 2014</h2>
+                                <p>PHIÊN CHỢ RAU CỦ QUẢ HỮU CƠ CUỐI TUẦN</p>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="address">
-                            <img src="images/map.png" alt="" />
-                            <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+                            <img src="{{URL::asset('public/frontend/images/map.png')}}" alt="" />
+                            <p>Thành phố Vinh - Tỉnh Nghệ An</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="footer-widget">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Service</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Online Help</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Order Status</a></li>
-                                <li><a href="#">Change Location</a></li>
-                                <li><a href="#">FAQ’s</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Quock Shop</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">T-Shirt</a></li>
-                                <li><a href="#">Mens</a></li>
-                                <li><a href="#">Womens</a></li>
-                                <li><a href="#">Gift Cards</a></li>
-                                <li><a href="#">Shoes</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Policies</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">Privecy Policy</a></li>
-                                <li><a href="#">Refund Policy</a></li>
-                                <li><a href="#">Billing System</a></li>
-                                <li><a href="#">Ticket System</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>About Shopper</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Company Information</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Store Location</a></li>
-                                <li><a href="#">Affillate Program</a></li>
-                                <li><a href="#">Copyright</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-sm-offset-1">
-                        <div class="single-widget">
-                            <h2>About Shopper</h2>
-                            <form action="#" class="searchform">
-                                <input type="text" placeholder="Your email address" />
-                                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
-                            </form>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
+        
         
         <div class="footer-bottom">
             <div class="container">
