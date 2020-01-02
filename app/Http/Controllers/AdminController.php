@@ -50,4 +50,5 @@ class AdminController extends Controller
             return Redirect::to('/admin');
          }
      
+     
 }

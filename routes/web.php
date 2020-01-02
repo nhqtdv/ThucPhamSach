@@ -15,6 +15,8 @@
 Route::get('/', 'HomeController@index' );
 //Route::get('/', 'CategoryProduct@add_category_product' );
 Route::get('/trang-chu', 'HomeController@index');
+//tìm kiếm
+Route::post('/tim-kiem', 'HomeController@search');
 //Danh muc san pham
 Route::get('/danh-muc-san-pham/{category_id}', 'CategoryProductabc@show_category_home' );
 Route::get('/nha-cung-cap/{category_id}', 'BrandProduct@show_brand_home' );
@@ -27,7 +29,8 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/dashboard','AdminController@show_dashboard');
 Route::get('/logout','AdminController@logout');
 Route::post('/admin-dashboard','AdminController@dashboard');
-
+Route::get('/manage-order', 'CheckoutController@manage_order');
+Route::get('/view-order/{orderId}', 'CheckoutController@view_order');
 
 //Category
 Route::get('/add-category', 'CategoryProductabc@add_category_product');
@@ -69,8 +72,16 @@ Route::get('/delete-cart/{rowId}', 'CartController@delete_cart');
 Route::post('/update-cart-qty', 'CartController@update_cart_quantity');
 
 ///Thanh toán
+Route::get('/login-checkout', 'CheckoutController@login_checkout');
+Route::post('/add-customer', 'CheckoutController@add_customer');
 Route::get('/checkout', 'CheckoutController@checkout');
-Route::post('/save-checkout', 'CheckoutController@save_checkout');
-Route::get('/completed', 'CheckoutController@payment');
+Route::post('/save-checkout-customer', 'CheckoutController@save_checkout_customer');
+Route::get('/logout-checkout', 'CheckoutController@logout_checkout');
+Route::post('/login-customer', 'CheckoutController@login_customer');
+Route::get('/payment', 'CheckoutController@payment');
+Route::post('/order-place', 'CheckoutController@order_place');
+
+///order
+
 
 

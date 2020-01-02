@@ -58,15 +58,54 @@
                         </div>
                         
                     </div>
+                    <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <?php 
+                                   $customer_id=Session::get('customer_id');
+
+                                   $shipping_id=Session::get('shipping_id');
+                                   if($customer_id!=NULL && $shipping_id=NULL){
+                                ?>
+                                <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                            <?php }elseif($customer_id!=NULL && $shipping_id!=NULL){ ?>
+                                <li><a href="{{URL::to('/payment')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                                <?php }else{
+
+                                    ?>
+                                    <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Thanh toán</a></li> 
+                                <?php } ?>
+
+                               
+                                
+                                <li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                <?php
+                                    $customer_id = Session::get('customer_id');
+                                    if($customer_id!=NULL){
+
+                                 ?>   
+                                    <li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng xuất</a></li>
+                                
+                                
+                                <?php
+                            }else{
+                                ?>
+                                 <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng nhập</a></li> 
+                                }
+                                <?php
+                            } ?>
+
+                            </ul>
+                        </div>
                  
                 </div>
+
             </div>
         </div><!--/header-middle-->
     
         <div class="header-bottom"><!--header-bottom-->
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-9">
+                    <div class="col-sm-8">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                 <span class="sr-only">Toggle navigation</span>
@@ -86,24 +125,22 @@
                                           @endforeach  
                                     </ul>
                                   
-                                </li>
-                                
-                                <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-                                      
-                                    </ul>
                                 </li> 
                                 <li><a href="{{URL::to('/show-cart')}}">Giỏ hàng</a></li>
                                 <li><a href="contact-us.html">Liên hệ</a></li>
                             </ul>
                         </div>
+
                     </div>
-                    <div class="col-sm-3">
-                        <div class="search_box pull-right">
-                            <input type="text" placeholder="Search"/>
-                        </div>
-                    </div>
+                   <!--  <div class="col-sm-4">
+                       <form action="{{URL::to('tim-kiem')}}" method="POST">
+                           {{csrf_field()}}
+                       <div class="search_box pull-right">
+                           <input type="text" name="keywords_submit" placeholder="Tìm kiếm sản phẩm"/>
+                           <input type="submit" name="search_items"class="btn btn-default btn-sm" value="Tìm kiếm"/>
+                       </div>
+                   </div> -->
+                    
                 </div>
             </div>
         </div><!--/header-bottom-->
@@ -154,6 +191,7 @@
     </section><!--/slider-->
     
     <section>
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">

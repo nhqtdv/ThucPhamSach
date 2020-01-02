@@ -5,9 +5,47 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="{{URL::to('/')}}">Trang chủ</a></li>
-				  <li class="active">Shopping Cart</li>
+				  <li class="active">Thanh toán giỏ hàng</li>
 				</ol>
-			</div>
+			</div><!--/breadcrums-->
+
+
+		
+
+			<!-- <div class="shopper-informations">
+				<div class="row">
+					
+					<div class="col-sm-5 clearfix">
+						<div class="bill-to">
+							<p>Thông tin gửi hàng</p>
+							<div class="form-one">
+								<form action="{{URL::to('/save-checkout-customer')}}" method="POST">
+									
+											{{csrf_field()}}
+									<input type="text" name="shipping_name" placeholder="Tên *">
+									<input type="text" name="shipping_email" placeholder="Email">
+									<input type="text" name="shipping_address" placeholder="Địa chỉ *">
+									<input type="text" name="shipping_phone" placeholder="Điện thoại">
+									<textarea name="shipping_notes"  placeholder="Các yêu cầu về giao hàng, đóng gói" rows="5"></textarea>
+									
+				                <label>Phương thức thanh toán</label>			
+					            <span>
+						        <label><input type="checkbox"> Chuyển khoản trực tiếp</label>
+					            </span>
+					            <span>
+						        <label><input type="checkbox"> COD</label>
+					             </span>
+					<input type="submit" background-color="green" value="Thanh toán" name="send_order" class="btn btn-primary btn-sm">
+					</form>
+							</div>
+							
+						</div>
+					</div>
+									
+				</div>
+			</div> -->
+			
+			<div class="review-payment"><h2>Xem lại giỏ hàng</h2></div>
 			<div class="table-responsive cart_info">
 				<?php
 				$content = Cart::content();
@@ -59,26 +97,24 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
-	</section> <!--/#cart_items-->
+			<h4 style="margin:40px 0;font-size:20px">Chọn hình thức thanh toán</h4>
+			<form method="POST" action="{{URL::to('/order-place')}}">
+				{{csrf_field()}}
+			<div class="payment-options">
+				<span>
+					<label><input type="checkbox" name="payment_option" value="1">Thanh toán qua ATM</label>
+				</span>
+				<span>
+					<label><input type="checkbox" name="payment_option" value="2">COD</label>
+				</span>
+				<span>
+					<label><input type="checkbox" name="payment_option" value="3">Thẻ tín dụng</label>
+				</span>
+				<input type="submit" background-color="green" value="Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
 
-	<section id="do_action">
-		<div class="container">
-			
-			<div class="row">
-			
-					<div class="total_area">
-						<ul>
-							<li>Tổng <span>{{Cart::total().'.'.'VNĐ'}}</span></li>
-							<li>Thuế<span>{{Cart::tax().'.'.'VNĐ'}}</span></li>
-							<li>Phí vận chuyển<span>Free</span></li>
-							<li>Thành tiền <span>{{Cart::total().'.'.'VNĐ'}}</span></li>
-						</ul>
-						
-							<a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Thanh toán</a>
-					</div>
-				</div>
 			</div>
-		</div>
-	</section><!--/#do_action-->
+				</form>
+			</div>
+
+	</section>
 @endsection
